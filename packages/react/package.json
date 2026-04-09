@@ -1,7 +1,7 @@
 {
-	"name": "@skyra/discord-components-react",
+	"name": "@welcomer-bot/discord-components-react",
 	"version": "4.0.2",
-	"description": "React bindings for @skyra/discord-components-core",
+	"description": "React bindings for @welcomer-bot/discord-components-core",
 	"author": "@skyra",
 	"license": "MIT",
 	"main": "dist/cjs/index.cjs",
@@ -22,7 +22,7 @@
 		"./dist/cjs/index.cjs",
 		"./dist/esm/index.mjs"
 	],
-	"homepage": "https://github.com/skyra-project/discord-components/tree/main/packages/react#readme",
+	"homepage": "https://github.com/Welcomer-Bot/discord-components/tree/main/packages/react#readme",
 	"scripts": {
 		"build": "tsup && yarn build:rename-esm-index",
 		"build:rename-esm-index": "node scripts/rename-esm-index.mjs",
@@ -30,7 +30,7 @@
 	},
 	"dependencies": {
 		"@lit/react": "^1.0.8",
-		"@skyra/discord-components-core": "workspace:^",
+		"@welcomer-bot/discord-components-core": "workspace:^",
 		"react": "^19.2.0"
 	},
 	"devDependencies": {
@@ -52,14 +52,15 @@
 		"node": ">=v18"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"registry": "https://npm.pkg.github.com/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/skyra-project/discord-components.git"
+		"url": "git+https://github.com/Welcomer-Bot/discord-components.git"
 	},
 	"bugs": {
-		"url": "https://github.com/skyra-project/discord-components/issues"
+		"url": "https://github.com/Welcomer-Bot/discord-components/issues"
 	},
 	"keywords": [
 		"skyra",
