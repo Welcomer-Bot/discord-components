@@ -1,12 +1,12 @@
 name: discord-components-core
-org: skyra
+org: Welcomer-Bot
 install: true
 packagePath: packages/core
 identifierBase: false
 tagTemplate: 'v{{new-version}}'
 monoRepo: false
 pushTag: true
-gitRepo: skyra-project/discord-components
+gitRepo: Welcomer-Bot/discord-components
 gitHostVariant: github
 githubRelease: true
 githubReleaseLatest: true

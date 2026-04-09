@@ -13,7 +13,7 @@ jobs:
   publish:
     name: Publish Alpha
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'skyra-project'
+    if: github.repository_owner == 'Welcomer-Bot'
     steps:
       - name: Checkout Project
         uses: actions/checkout@v6
@@ -57,14 +57,14 @@ jobs:
         working-directory: packages/core
         run: |
           yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
-          yarn config set npmPublishRegistry "https://registry.yarnpkg.com"
+          yarn config set npmPublishRegistry "https://npm.pkg.github.com/"
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
-      - name: Publish @skyra/discord-components-core
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish @welcomer-bot/discord-components-core
         working-directory: packages/core
         if: false
         run: yarn npm publish --tag alpha
-      - name: Publish @skyra/discord-components-react
+      - name: Publish @welcomer-bot/discord-components-react
         working-directory: packages/react
         if: false
         run: yarn npm publish --tag alpha

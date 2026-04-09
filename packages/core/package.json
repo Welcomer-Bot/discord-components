@@ -1,5 +1,5 @@
 {
-	"name": "@skyra/discord-components-core",
+	"name": "@welcomer-bot/discord-components-core",
 	"version": "4.0.2",
 	"description": "Web components to easily build and display fake Discord messages on your webpages.",
 	"author": "@skyra",
@@ -109,7 +109,7 @@
 		"./dist/components/discord-verified-author-tag/DiscordVerifiedAuthorTag.js",
 		"./dist/components/discord-video-attachment/DiscordVideoAttachment.js"
 	],
-	"homepage": "https://github.com/skyra-project/discord-components/tree/main/packages/core#readme",
+	"homepage": "https://github.com/Welcomer-Bot/discord-components/tree/main/packages/core#readme",
 	"scripts": {
 		"build:ts": "tsc -b src",
 		"watch": "tsc -b src --watch",
@@ -145,14 +145,15 @@
 		"node": ">=v18"
 	},
 	"publishConfig": {
-		"access": "public"
+		"access": "public",
+		"registry": "https://npm.pkg.github.com/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/skyra-project/discord-components.git"
+		"url": "git+https://github.com/Welcomer-Bot/discord-components.git"
 	},
 	"bugs": {
-		"url": "https://github.com/skyra-project/discord-components/issues"
+		"url": "https://github.com/Welcomer-Bot/discord-components/issues"
 	},
 	"keywords": [
 		"skyra",

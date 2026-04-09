@@ -226,7 +226,7 @@ export default defineConfig({
 					tag: 'meta',
 					attrs: {
 						name: 'subject',
-						content: 'Documentation website for @skyra/discord-components-core'
+						content: 'Documentation website for @welcomer-bot/discord-components-core'
 					}
 				},
 				{
@@ -513,7 +513,7 @@ export default defineConfig({
 			social: [
 				{
 					icon: 'github',
-					href: 'https://github.com/skyra-project/discord-components',
+					href: 'https://github.com/Welcomer-Bot/discord-components',
 					label: 'GitHub'
 				}
 			],
