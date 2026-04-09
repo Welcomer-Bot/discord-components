@@ -313,6 +313,19 @@ export class DiscordEmbed extends LitElement implements LightTheme {
 	@property()
 	public accessor provider: string;
 
+	/**
+	 * Indicates that you intend to use a custom image element,
+	 * useful if you want to use something like
+	 * {@link https://nextjs.org/docs/pages/api-reference/components/image | `next/image`}
+	 *
+	 * Once this property is set, use the child element (default slot) to insert
+	 * the code for the desired image component
+	 *
+	 * @remarks Setting this will disable the {@link DiscordEmbed.image | `image`} property.
+	 */
+	@property({ type: Boolean, attribute: 'custom-image-element' })
+	public accessor customImageElement = false;
+
 	@consume({ context: messagesLightTheme, subscribe: true })
 	@property({ type: Boolean, reflect: true, attribute: 'light-theme' })
 	public accessor lightTheme = false;
@@ -361,7 +374,7 @@ export class DiscordEmbed extends LitElement implements LightTheme {
 						<slot name="description"></slot>
 						<slot name="fields"></slot>
 						${when(
-							this.image || this.video,
+							this.image || this.video || this.customImageElement,
 							() =>
 								html`<div class=${classMap({ 'discord-embed-media': true, 'discord-embed-media-video': Boolean(this.video) })}>
 									${this.renderMedia()}
@@ -390,6 +403,10 @@ export class DiscordEmbed extends LitElement implements LightTheme {
 					<img src=${ifDefined(this.image)} alt="Discord embed media" class="discord-embed-image" />
 				</video>
 			`;
+		}
+
+		if (this.customImageElement) {
+			return html`<slot></slot>`;
 		}
 
 		if (this.image) {
