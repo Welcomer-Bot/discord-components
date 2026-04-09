@@ -17,14 +17,14 @@ jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'skyra-project'
+    if: github.repository_owner == 'Welcomer-Bot'
     steps:
       - name: Checkout Project
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: main
-          token: ${{ secrets.SKYRA_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install dependencies
         uses: sapphiredev/.github/actions/install-yarn-dependencies@main
         with:
