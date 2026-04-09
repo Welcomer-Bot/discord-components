@@ -79,3 +79,15 @@ jobs:
       - name: Publish @skyra/discord-components-react
         working-directory: packages/react
         run: yarn npm publish
+      - name: Configure yarn for GitHub Packages
+        run: |
+          yarn config set npmAuthToken ${NODE_AUTH_TOKEN}
+          yarn config set npmPublishRegistry "https://npm.pkg.github.com"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish @skyra/discord-components-core to GitHub Packages
+        working-directory: packages/core
+        run: yarn npm publish
+      - name: Publish @skyra/discord-components-react to GitHub Packages
+        working-directory: packages/react
+        run: yarn npm publish
